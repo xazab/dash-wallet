@@ -77,12 +77,28 @@ Finally, you can build Dash Wallet and sign it with your development key. Again 
 use
 
 	# first time only
-	git clone -b master https://github.com/HashEngineering/dash-wallet.git dash-wallet
+	git clone -b master https://github.com/dashevo/dash-wallet.git dash-wallet
 	cd dash-wallet
 	git pull
 	git submodule init
     git submodule update
-    
+
+    cd ..
+    git clone https://github.com/dashevo/android-dpp.git
+    cd android-dpp
+    gradlew assemble
+
+    cd ..
+    git clone https://github.com/dashevo/dapi-client-android.git
+    cd dapi-client-android
+    gradlew assemble
+
+    cd ..
+    git clone https://github.com/dashevo/android-dashpay.git
+    cd android-dashpay
+    gradlew assemble
+    cd ..
+
 	# each time
 	cd dash-wallet
 	git pull
