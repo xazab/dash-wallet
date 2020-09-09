@@ -18,23 +18,23 @@ repositories {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation(project(':integration-android')) {
-        exclude(group: 'com.google.android', module: 'android')
-    }
     implementation 'androidx.annotation:annotation:1.1.0'
-    implementation 'androidx.core:core:1.2.0'
+    implementation 'androidx.core:core:1.3.1'
     implementation('androidx.legacy:legacy-support-v13:1.0.0') {
         exclude(group: 'com.android.support', module: 'support-fragment')
         exclude(group: 'com.android.support', module: 'support-media-compat')
     }
     implementation 'androidx.legacy:legacy-support-core-utils:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'com.google.android:flexbox:1.1.0'
-    implementation 'androidx.preference:preference:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+    implementation(project(':integration-android')) {
+        exclude(group: 'com.google.android', module: 'android')
+    }
     implementation "org.dashj:dashj-core:$dashjVersion"
     implementation 'org.dashevo:dashpay:0.14-SNAPSHOT'
     implementation 'org.dashevo:platform-core:0.14-SNAPSHOT'
@@ -78,7 +78,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     implementation 'com.google.firebase:firebase-analytics:17.5.0'
-    implementation 'com.google.firebase:firebase-inappmessaging-display:19.1.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:19.1.1'
 
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
@@ -87,14 +87,14 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
     //Espresso
-    androidTestImplementation ('androidx.test:runner:1.1.0') {
+    androidTestImplementation ('androidx.test:runner:1.3.0') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation ('androidx.test.espresso:espresso-core:3.1.0') {
+    androidTestImplementation ('androidx.test.espresso:espresso-core:3.3.0') {
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation ('androidx.test.espresso:espresso-intents:3.1.0') {
+    androidTestImplementation ('androidx.test.espresso:espresso-intents:3.3.0') {
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
         exclude group: 'com.android.support', module: 'support-annotations'
     }
