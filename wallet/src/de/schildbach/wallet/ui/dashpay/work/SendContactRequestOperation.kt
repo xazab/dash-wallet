@@ -39,9 +39,9 @@ class SendContactRequestOperation(val application: Application) {
                         WorkInfo.State.FAILED -> {
                             val errorMessage = BaseWorker.extractError(workInfo.outputData)
                             emit(if (errorMessage != null) {
-                                Resource.error(errorMessage)
+                                Resource.error(errorMessage, null)
                             } else {
-                                Resource.error(Exception())
+                                Resource.error(Exception(), null)
                             })
                         }
                         WorkInfo.State.CANCELLED -> {

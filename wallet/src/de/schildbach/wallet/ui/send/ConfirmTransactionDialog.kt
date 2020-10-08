@@ -94,11 +94,11 @@ class ConfirmTransactionDialog : BaseBottomSheetDialogFragment() {
     }
 
     private val username by lazy {
-        arguments!!.getString(ARG_PAYEE_USERNAME)
+        requireArguments().getString(ARG_PAYEE_USERNAME)!!
     }
 
     private val pendingContactRequest by lazy {
-        arguments!!.getBoolean(ARG_PAYEE_PENDING_CONTACT_REQUEST, false)
+        requireArguments().getBoolean(ARG_PAYEE_PENDING_CONTACT_REQUEST, false)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -108,7 +108,7 @@ class ConfirmTransactionDialog : BaseBottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         maybeCleanUpPrefs()
-        arguments!!.apply {
+        requireArguments().apply {
             input_value.text = getString(ARG_AMOUNT)
             fiat_symbol.text = getString(ARG_FIAT_SYMBOL)
             fiat_value.text = getString(ARG_AMOUNT_FIAT)
@@ -133,14 +133,14 @@ class ConfirmTransactionDialog : BaseBottomSheetDialogFragment() {
             } else if (displayNameText != null) {
                 sendtoaddress.visibility = View.GONE
                 displayname.text = displayNameText
-                val defaultAvatar = UserAvatarPlaceholderDrawable.getDrawable(context!!,
+                val defaultAvatar = UserAvatarPlaceholderDrawable.getDrawable(requireContext(),
                         username[0])
 
-                if (avatarUrl.isNotEmpty()) {
+                if (avatarUrl.isNullOrEmpty()) {
+                    avatar.background = defaultAvatar
+                } else {
                     Glide.with(avatar).load(avatarUrl).circleCrop()
                             .placeholder(defaultAvatar).into(avatar)
-                } else {
-                    avatar.background = defaultAvatar
                 }
                 confirm_auto_accept.isChecked = autoAcceptLastValue
                 if (pendingContactRequest) {

@@ -91,7 +91,7 @@ class TransactionResultActivity : AbstractWalletActivity() {
     }
 
     private val userData by lazy {
-        intent.extras!!.getParcelable<UsernameSearchResult>(EXTRA_USER_DATA)
+        intent.extras!!.getParcelable<UsernameSearchResult>(EXTRA_USER_DATA)!!
     }
 
     @SuppressLint("SetTextI18n")
