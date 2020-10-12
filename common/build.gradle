@@ -29,7 +29,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
     api 'androidx.browser:browser:1.0.0'
-    implementation "org.dashj:dashj-core:$dashjVersion"
+    implementation "org.dashj:dashj-core:0.17.1"
 
     //Retrofit + OkHttp
     api "com.squareup.okhttp3:okhttp:$ok_http_version"

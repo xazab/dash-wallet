@@ -1,16 +1,12 @@
 apply plugin: 'com.android.application'
 
 ext {
-    archivesBaseName = 'dash-wallet'
+    archivesBaseName = 'xazab-wallet'
     androidSupportVersion = '28.0.0'
     lifecycleVersion = "2.1.0"
 }
 repositories {
     mavenLocal()
-    maven {
-        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
-        name 'OJO snapshots'
-    }
     maven {
         url 'https://maven.google.com/'
         name 'Google'
@@ -36,7 +32,7 @@ dependencies {
     implementation 'com.google.android:flexbox:1.1.0'
     implementation 'androidx.preference:preference:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
-    implementation "org.dashj:dashj-core:$dashjVersion"
+    implementation "org.dashj:dashj-core:0.17.1"
     implementation 'com.google.protobuf:protobuf-java:3.4.0'
     implementation 'com.google.guava:guava:27.0.1-android'
     implementation 'com.google.zxing:core:3.3.3'
