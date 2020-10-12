@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">Dash Wallet [testnet]</string>
-	<string name="app_name_short">Dash [testnet]</string>
+	<string name="app_name">Xazab Wallet [testnet]</string>
+	<string name="app_name_short">Xazab [testnet]</string>
 
 	<string-array name="preferences_precision_values">
 		<item>8</item>
@@ -11,11 +11,11 @@
 		<item>0/6</item>
 	</string-array>
 	<string-array name="preferences_precision_labels">
-		<item>tDASH, 8 decimal places</item>
-		<item>tDASH, 6 decimal places</item>
-		<item>tDASH, 4 decimal places</item>
-		<item>mtDASH, 2 decimal places</item>
-		<item>µtDASH, no decimal places</item>
+		<item>tXZB, 8 decimal places</item>
+		<item>tXZB, 6 decimal places</item>
+		<item>tXZB, 4 decimal places</item>
+		<item>mtXZB, 2 decimal places</item>
+		<item>µtXZB, no decimal places</item>
 	</string-array>
 	<string-array name="preferences_block_explorer_values">
 		<item>https://testnet-insight.dashevo.org/insight/</item>

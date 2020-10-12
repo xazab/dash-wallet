@@ -65,12 +65,12 @@ public final class Constants {
         switch (BuildConfig.FLAVOR) {
             case "prod":
             case "beta": {
-                DNS_SEED = new String[]{"dnsseed.dash.org", "dnsseed.dashdot.io"};
+                DNS_SEED = new String[]{"dnsseed.xazab.xyz", "80.211.38.141:30303"};
                 BIP44_PATH = DeterministicKeyChain.BIP44_ACCOUNT_ZERO_PATH;
                 NETWORK_PARAMETERS = MainNetParams.get();
                 IS_PROD_BUILD = true;
                 FILENAME_NETWORK_SUFFIX = "";
-                WALLET_NAME_CURRENCY_CODE = "dash";
+                WALLET_NAME_CURRENCY_CODE = "xazab";
                 break;
             }
             case "_testNet3": {
@@ -85,10 +85,7 @@ public final class Constants {
             case "devNet": {
                 DNS_SEED = new String[]{
                         "devnet-maithai.thephez.com",
-                        "54.187.113.35", "54.200.201.200", "34.216.233.163",
-                        "34.221.188.185", "54.189.63.67", "52.40.117.135",
-                        "54.187.111.107", "34.212.68.164", "18.237.142.23",
-                        "54.202.73.177"
+                        "80.211.38.141","80.211.3.167","80.211.136.83","80.211.104.179"
                 };
                 BIP44_PATH = DeterministicKeyChain.BIP44_ACCOUNT_ZERO_PATH_TESTNET;
                 NETWORK_PARAMETERS = DevNetParams.get("maithai", "yMtULrhoxd8vRZrsnFobWgRTidtjg2Rnjm", 20001, DNS_SEED);
@@ -172,7 +169,7 @@ public final class Constants {
             : BITEASY_API_URL_TEST;
 
     /** URL to fetch version alerts from. */
-    public static final HttpUrl VERSION_URL = HttpUrl.parse("https://wallet.schildbach.de/version");
+    public static final HttpUrl VERSION_URL = HttpUrl.parse("https://version.xazab.xyz");
     /** URL to fetch dynamic fees from. */
     public static final HttpUrl DYNAMIC_FEES_URL = HttpUrl.parse("https://wallet.schildbach.de/fees");
 
@@ -192,10 +189,10 @@ public final class Constants {
     public static final String DEFAULT_EXCHANGE_CURRENCY = "USD";
 
     /** Recipient e-mail address for reports. */
-    public static final String REPORT_EMAIL = "support@dash.org";
+    public static final String REPORT_EMAIL = "support@xazab.xyz";
 
     /** Subject line for manually reported issues. */
-    public static final String REPORT_SUBJECT_BEGIN = "Android Dash Wallet:  ";
+    public static final String REPORT_SUBJECT_BEGIN = "Android Xazab Wallet:  ";
     public static final String REPORT_SUBJECT_ISSUE = "Reported issue";
 
     /** Subject line for crash reports. */
@@ -270,7 +267,7 @@ public final class Constants {
     //Dash Specific
     public static long EARLIEST_HD_SEED_CREATION_TIME = 1427610960L;
 
-    public static String WALLET_URI_SCHEME = "dashwallet";
+    public static String WALLET_URI_SCHEME = "xazabwallet";
 
     public static boolean ENABLE_ZERO_FEES = false; //Enable Zero Fee's on TestNet only.
 
