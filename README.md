@@ -22,5 +22,5 @@ You can build the production version using Gradle:
 `./gradlew assembleProdRelease`
 
 The built apks will be in `wallet/build/outputs/apk`
-
+Xumvngaxg3w3Fr9THsnCLpSBCQbDcuTe4K
 
