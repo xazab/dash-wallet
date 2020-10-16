@@ -8,7 +8,7 @@ dependencies {
     implementation(project(':integration-android')) {
         exclude(group: 'com.google.android', module: 'android')
     }
-    implementation "org.dashj:dashj-core:0.17.1"
+    implementation "org.dashj:dashj-core:0.17.14"
     implementation 'androidx.multidex:multidex:2.0.1'
 }
 
